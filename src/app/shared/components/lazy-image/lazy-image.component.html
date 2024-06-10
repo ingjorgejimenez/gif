@@ -1,0 +1,16 @@
+<div class="flex items-center justify-center w-full aspect-[3/2] h-auto">
+  <img
+    class="{{ class }} fade-in aspect-[3/2] w-full h-auto object-contain"
+    [src]="src"
+    [alt]="alt"
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+  />
+  <img
+    *ngIf="!hasLoaded"
+    width="50"
+    height="50"
+    src="assets/Loader.svg"
+    alt="Loader"
+  />
+</div>
